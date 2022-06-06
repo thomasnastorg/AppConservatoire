@@ -1,7 +1,7 @@
 package Model;
 
 public class Personne {
-
+    private int id;
     private String nom;
     private String prenom;
     private int tel;
@@ -9,7 +9,7 @@ public class Personne {
     private String mail;
 
 
-    public Personne(String nom, String prenom, int tel, String adresse, String mail, String niveaux){
+    public Personne(String nom, String prenom, int tel, String adresse, String mail){
         this.nom = nom;
         this.prenom = prenom;
         this.tel = tel;
@@ -57,10 +57,19 @@ public class Personne {
         this.mail = mail;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Personne{" +
-                "nom='" + nom + '\'' +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", tel=" + tel +
                 ", adresse='" + adresse + '\'' +

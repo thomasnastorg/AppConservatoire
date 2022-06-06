@@ -22,14 +22,15 @@ public class DataSQL {
 
         try {
             st = con.createStatement();
-            rs = st.executeQuery("SELECT * FROM `client`");
+            rs = st.executeQuery("SELECT * FROM personne c INNER JOIN adherent p on c.id = p.id ");
             System.out.println(rs);
             while (rs.next()){
                 u = new Adherent(
-                        rs.getString("id"),
-                        rs.getString("id"),
-                        rs.getString("id"),
-                        rs.getString("id"),
+                        rs.getString("nom"),
+                        rs.getString("prénom"),
+                        rs.getInt("tel"),
+                        rs.getString("adres"),
+                        rs.getString("mail")),
                         rs.getString("niveaux"));
                 users.add(u);
             }
