@@ -1,5 +1,5 @@
 package Controleur;
-import DAL.ClientSql
+import DAL.ClientSql;
 public class Mgr {
 
 }
